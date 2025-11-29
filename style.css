@@ -1,0 +1,185 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 1em;
+  background-color: #fafafa;
+  color: #333;
+}
+
+header, nav, main, footer {
+  margin: 1.5em 0;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  list-style: none;
+  padding: 0.5em;
+  background: #eee;
+  border-radius: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Figures */
+figure {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists Flexbox Layout */
+.lists-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.list-block {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Table Grid */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 0.5em;
+  text-align: left;
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* Form Styling */
+form fieldset {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+form legend {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+form label {
+  display: block;
+  margin-top: 0.5em;
+}
+
+form input, form select, form button {
+  margin-top: 0.3em;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+form button {
+  background: #27ae60;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  margin-top: 1em;
+  border-radius: 6px;
+}
+
+form button:hover {
+  background: #219150;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2em;
+  padding: 1em;
+  background: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .lists-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  form input, form select, form button {
+    max-width: 100%;
+  }
+}
+
+/* Flex container for fieldsets (Details & Preferences side by side) */
+.form-sections {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+form fieldset {
+  flex: 1 1 45%; /* Two sections side by side */
+  margin: 1em 0;
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Stack fieldsets on smaller screens */
+@media (max-width: 768px) {
+  .form-sections {
+    flex-direction: column;
+  }
+
+  form fieldset {
+    flex: 1 1 100%;
+  }
+}
